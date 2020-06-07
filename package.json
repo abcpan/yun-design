@@ -33,10 +33,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run clear && npm run build-ts && npm run build-sass",  
+    "build": "npm run clean && npm run build-ts && npm run build-sass",  
     "build-ts": "tsc -p tsconfig.build.json",
     "build-sass": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "clear": "rmraf ./dist",
+    "clean": "rmraf ./dist",
+    "lint": "eslint --ext js,ts,tsx,jsx src",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",

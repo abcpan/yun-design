@@ -43,23 +43,6 @@ const SimeComplete = () => {
 }
 
 const AsnycSimeComplete = () => {
-  // const lakers = [
-  //   "bradley", "pope", "caruso","cook","cousion", "james", "ad", "green", "howard","kuzma","mcGee","rando"
-  // ]
-  const lakerList:OptionType<CustomOptonType>[] = [
-    {value:"pope", key:1},
-    {value:"caruso",key:2},
-    {value:"bradley",key:3},
-    {value:"cook",key:4},
-    {value:"cousion",key:5},
-    {value:"james", key:6},
-    {value:"ad", key:7},
-    {value:"green", key:8},
-    {value:"howard",key:9},
-    {value:"kuzma",key:10},
-    {value:"mcGee",key:11},
-    {value:"rando",key:12},
-  ]
   const handleFetch = (query: string) => {
     return fetch(`https://api.github.com/search/users?q=${query}`)
       .then(res => res.json())
@@ -73,7 +56,7 @@ const AsnycSimeComplete = () => {
         return formatItems;
       })
   }
-  const renderOption = (option: OptionType) => {
+  const renderOption = (option: any) => {
     console.log(option)
     return (
       <div>

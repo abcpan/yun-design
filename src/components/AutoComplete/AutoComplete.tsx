@@ -42,7 +42,7 @@ const AutoComplete: FC <AutoCompleteProps > = (props) => {
       setSuggestions([])
     }
     setHightIndex(-1);
-  },[debounceValue])
+  },[debounceValue, fetchSuggestions])
   /**修改 */
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>{
     const value = e.target.value.trim();
