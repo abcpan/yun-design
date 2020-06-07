@@ -1,7 +1,8 @@
-import React, { useContext, useState, createRef } from "react";
+import React, { useContext, useState } from "react";
 import classNames from "classnames";
 import { IMenuItemProps } from "./MenuItem";
 import { MenuContext } from "./context";
+import Icon from "../Icon/Icon";
 export interface ISubMenuProps  {
   index?: number;
   title: string;
@@ -50,20 +51,23 @@ const SubMenu: React.FC<ISubMenuProps> = (props) => {
         console.error("error--->")
       }
     })
-    const subMenuCls = classNames("submenu-wrap", {
-      "submenu-open": open
-    })
+    
     return (
-      <ul className= {subMenuCls}>
+      <ul className= "submenu-wrap">
         {childrenComponent}
       </ul>
     )
   }
 
-  const cls = classNames("menu-item submenu", className)
+  const cls = classNames("menu-item submenu", className, {
+    "submenu-open": open
+  })
   return (
     <li className={cls} {...mouseEvents}>
-      <div className="submenu-title">{title}</div>
+      <div className="submenu-title">
+        {title}
+        <Icon icon="chevron-down" size="sm" className="arrow-down"/>
+      </div>
       {rencerChildren()}
     </li>
   )

@@ -1,13 +1,20 @@
-// config
+
 @import "./variables.scss";
 
-// normalize
 @import "./normal.scss";
 
-// mixin
 @import "./mixin.scss";
 
-// button
 @import "../components/Button/style.scss";
-// menu
-@import "../components//Menu/style.scss";
+
+@import "../components/Menu/style.scss";
+
+@import "../components/Icon/style.scss";
+
+@import "../components/Input/style.scss";
+
+@import "../components/AutoComplete/style.scss";
+
+@import "../components/Upload/style.scss";
+
+@import "../components/Progress/style.scss";
